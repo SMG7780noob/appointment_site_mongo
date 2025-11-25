@@ -1,14 +1,10 @@
 services:
   - type: web
-    name: appointment-app
-    env: docker
+    name: appointmentapp
     plan: free
-    region: oregon
-    dockerfilePath: ./Dockerfile
-    envVars:
-      - key: MONGO_CONNECTION
-        value: YOUR_MONGO_CONNECTION_STRING
-      - key: MONGO_DB
-        value: AppointmentDb
-      - key: MONGO_COLLECTION
-        value: Appointments
+    env: docker
+    repo: https://github.com/SMG7780noob/appointment_site_mongo
+    region: singapore
+    buildCommand: ""
+    startCommand: ""
+    autoDeploy: true
