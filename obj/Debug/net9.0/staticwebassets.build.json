@@ -1,0 +1,362 @@
+{
+  "Version": 1,
+  "Hash": "5hjPaKOpg05OZAEsRbWCXxz7b6rVMjKGMPYeVzxVeCs=",
+  "Source": "AppointmentApp",
+  "BasePath": "_content/AppointmentApp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "AppointmentApp\\wwwroot",
+      "Source": "AppointmentApp",
+      "ContentRoot": "C:\\Users\\jaisw\\output\\appointment_site_mongo\\wwwroot\\",
+      "BasePath": "_content/AppointmentApp",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\jaisw\\output\\appointment_site_mongo\\obj\\Debug\\net9.0\\compressed\\58dgwtaw2z-36gw2cz0ar.gz",
+      "SourceId": "AppointmentApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jaisw\\output\\appointment_site_mongo\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/AppointmentApp",
+      "RelativePath": "css/site#[.{fingerprint=36gw2cz0ar}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\jaisw\\output\\appointment_site_mongo\\wwwroot\\css\\site.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "qewnf9nmcl",
+      "Integrity": "0iYlW1ByE1Y+gVJcLGcLC5d8B5iobu5kNzxhKp6FTF4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\jaisw\\output\\appointment_site_mongo\\wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\jaisw\\output\\appointment_site_mongo\\wwwroot\\css\\site.css",
+      "SourceId": "AppointmentApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jaisw\\output\\appointment_site_mongo\\wwwroot\\",
+      "BasePath": "_content/AppointmentApp",
+      "RelativePath": "css/site#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "36gw2cz0ar",
+      "Integrity": "2zufbj++Dp8XNs9tvGozwOMXhTesl++TQ5Bi1/uk6T0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "css/site.36gw2cz0ar.css",
+      "AssetFile": "C:\\Users\\jaisw\\output\\appointment_site_mongo\\obj\\Debug\\net9.0\\compressed\\58dgwtaw2z-36gw2cz0ar.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.003076923077"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "324"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0iYlW1ByE1Y+gVJcLGcLC5d8B5iobu5kNzxhKp6FTF4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Nov 2025 16:45:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"2zufbj++Dp8XNs9tvGozwOMXhTesl++TQ5Bi1/uk6T0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "36gw2cz0ar"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2zufbj++Dp8XNs9tvGozwOMXhTesl++TQ5Bi1/uk6T0="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.36gw2cz0ar.css",
+      "AssetFile": "C:\\Users\\jaisw\\output\\appointment_site_mongo\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "587"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2zufbj++Dp8XNs9tvGozwOMXhTesl++TQ5Bi1/uk6T0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Nov 2025 16:45:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "36gw2cz0ar"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2zufbj++Dp8XNs9tvGozwOMXhTesl++TQ5Bi1/uk6T0="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.36gw2cz0ar.css.gz",
+      "AssetFile": "C:\\Users\\jaisw\\output\\appointment_site_mongo\\obj\\Debug\\net9.0\\compressed\\58dgwtaw2z-36gw2cz0ar.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "324"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0iYlW1ByE1Y+gVJcLGcLC5d8B5iobu5kNzxhKp6FTF4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Nov 2025 16:45:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "36gw2cz0ar"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0iYlW1ByE1Y+gVJcLGcLC5d8B5iobu5kNzxhKp6FTF4="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "C:\\Users\\jaisw\\output\\appointment_site_mongo\\obj\\Debug\\net9.0\\compressed\\58dgwtaw2z-36gw2cz0ar.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.003076923077"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "324"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0iYlW1ByE1Y+gVJcLGcLC5d8B5iobu5kNzxhKp6FTF4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Nov 2025 16:45:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"2zufbj++Dp8XNs9tvGozwOMXhTesl++TQ5Bi1/uk6T0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2zufbj++Dp8XNs9tvGozwOMXhTesl++TQ5Bi1/uk6T0="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "C:\\Users\\jaisw\\output\\appointment_site_mongo\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "587"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2zufbj++Dp8XNs9tvGozwOMXhTesl++TQ5Bi1/uk6T0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Nov 2025 16:45:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2zufbj++Dp8XNs9tvGozwOMXhTesl++TQ5Bi1/uk6T0="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css.gz",
+      "AssetFile": "C:\\Users\\jaisw\\output\\appointment_site_mongo\\obj\\Debug\\net9.0\\compressed\\58dgwtaw2z-36gw2cz0ar.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "324"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0iYlW1ByE1Y+gVJcLGcLC5d8B5iobu5kNzxhKp6FTF4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Nov 2025 16:45:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0iYlW1ByE1Y+gVJcLGcLC5d8B5iobu5kNzxhKp6FTF4="
+        }
+      ]
+    }
+  ]
+}
