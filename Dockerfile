@@ -1,23 +1,28 @@
-# Build Stage
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+# ASP.NET 8 runtime
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+WORKDIR /app
+EXPOSE 8080
+EXPOSE 8081
+
+# Build stage
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copy csproj (root me hai)
-COPY AppointmentApp.csproj ./
+# COPY csproj from AppointmentApp folder
+COPY AppointmentApp/AppointmentApp.csproj AppointmentApp/
 
-# Restore dependencies
-RUN dotnet restore
+RUN dotnet restore AppointmentApp/AppointmentApp.csproj
 
-# Copy everything
+# Copy all source code
 COPY . .
 
-# Build and publish
-RUN dotnet publish -c Release -o /app/publish
+WORKDIR "/src/AppointmentApp"
+RUN dotnet build "AppointmentApp.csproj" -c Release -o /app/build
 
+FROM build AS publish
+RUN dotnet publish "AppointmentApp.csproj" -c Release -o /app/publish
 
-# Runtime Stage
-FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS runtime
+FROM base AS final
 WORKDIR /app
-COPY --from=build /app/publish .
-
+COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "AppointmentApp.dll"]
