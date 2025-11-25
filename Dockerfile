@@ -1,20 +1,23 @@
+# Build Stage
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
-
 WORKDIR /src
 
-# Copy csproj from correct folder
-COPY AppointmentApp/AppointmentApp.csproj ./ 
+# Copy csproj (root me hai)
+COPY AppointmentApp.csproj ./
 
-# Restore
+# Restore dependencies
 RUN dotnet restore
 
-# Copy rest of the project
+# Copy everything
 COPY . .
 
-# Build
+# Build and publish
 RUN dotnet publish -c Release -o /app/publish
 
+
+# Runtime Stage
 FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS runtime
 WORKDIR /app
 COPY --from=build /app/publish .
+
 ENTRYPOINT ["dotnet", "AppointmentApp.dll"]
