@@ -1,28 +1,25 @@
-# ASP.NET 8 runtime
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-WORKDIR /app
-EXPOSE 8080
-EXPOSE 8081
-
-# Build stage
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+# Use the official .NET SDK image for building
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
 
-# COPY csproj from AppointmentApp folder
+# Copy solution and project files
+COPY appointment_site_mongo.sln ./
 COPY AppointmentApp/AppointmentApp.csproj AppointmentApp/
 
-RUN dotnet restore AppointmentApp/AppointmentApp.csproj
+# Restore dependencies
+RUN dotnet restore "AppointmentApp/AppointmentApp.csproj"
 
-# Copy all source code
+# Copy everything
 COPY . .
 
-WORKDIR "/src/AppointmentApp"
-RUN dotnet build "AppointmentApp.csproj" -c Release -o /app/build
+# Build app
+RUN dotnet build "AppointmentApp/AppointmentApp.csproj" -c Release -o /app/build
 
-FROM build AS publish
-RUN dotnet publish "AppointmentApp.csproj" -c Release -o /app/publish
+# Publish
+RUN dotnet publish "AppointmentApp/AppointmentApp.csproj" -c Release -o /app/publish
 
-FROM base AS final
+# Final stage
+FROM mcr.microsoft.com/dotnet/aspnet:7.0
 WORKDIR /app
-COPY --from=publish /app/publish .
+COPY --from=build /app/publish .
 ENTRYPOINT ["dotnet", "AppointmentApp.dll"]
