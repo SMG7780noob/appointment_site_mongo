@@ -1,10 +1,15 @@
 services:
   - type: web
     name: appointmentapp
-    plan: free
     env: docker
-    repo: https://github.com/SMG7780noob/appointment_site_mongo
     region: singapore
-    buildCommand: ""
-    startCommand: ""
-    autoDeploy: true
+    plan: free
+    branch: main
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: MongoSettings__ConnectionString
+        sync: false
+      - key: MongoSettings__DatabaseName
+        value: appointmentdb
+      - key: MongoSettings__CollectionName
+        value: appointments
