@@ -10,14 +10,14 @@ builder.Services.Configure<MongoSettings>(
     builder.Configuration.GetSection("MongoSettings")
 );
 
-// Register MongoClient as a singleton
+// Register MongoClient
 builder.Services.AddSingleton<IMongoClient>(sp =>
 {
     var settings = sp.GetRequiredService<IOptions<MongoSettings>>().Value;
     return new MongoClient(settings.ConnectionString);
 });
 
-// Register repositories
+// Register Repositories
 builder.Services.AddScoped<IAppointmentRepository, AppointmentRepository>();
 builder.Services.AddScoped<UserRepository>();
 
@@ -28,7 +28,6 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
-
 
 var app = builder.Build();
 
