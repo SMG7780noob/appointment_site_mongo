@@ -12,8 +12,10 @@ RUN dotnet build "AppointmentApp/AppointmentApp.csproj" -c Release -o /app/build
 
 RUN dotnet publish "AppointmentApp/AppointmentApp.csproj" -c Release -o /app/publish
 
+
 FROM mcr.microsoft.com/dotnet/aspnet:9.0
 WORKDIR /app
+
 COPY --from=build /app/publish .
 
 ENTRYPOINT ["dotnet", "AppointmentApp.dll"]
