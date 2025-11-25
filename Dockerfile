@@ -1,25 +1,18 @@
-# Use the official .NET SDK image for building
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+# Build stage
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 
-# Copy solution and project files
-COPY appointment_site_mongo.sln ./
-COPY AppointmentApp/AppointmentApp.csproj AppointmentApp/
+COPY *.sln .
+COPY AppointmentApp/*.csproj AppointmentApp/
+RUN dotnet restore AppointmentApp/AppointmentApp.csproj
 
-# Restore dependencies
-RUN dotnet restore "AppointmentApp/AppointmentApp.csproj"
-
-# Copy everything
 COPY . .
+RUN dotnet build AppointmentApp/AppointmentApp.csproj -c Release -o /app/build
+RUN dotnet publish AppointmentApp/AppointmentApp.csproj -c Release -o /app/publish
 
-# Build app
-RUN dotnet build "AppointmentApp/AppointmentApp.csproj" -c Release -o /app/build
-
-# Publish
-RUN dotnet publish "AppointmentApp/AppointmentApp.csproj" -c Release -o /app/publish
-
-# Final stage
-FROM mcr.microsoft.com/dotnet/aspnet:7.0
+# Runtime stage
+FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS final
 WORKDIR /app
 COPY --from=build /app/publish .
+
 ENTRYPOINT ["dotnet", "AppointmentApp.dll"]
